@@ -4,6 +4,7 @@ using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Net;
@@ -20,14 +21,14 @@ namespace AzureHttpTrigger
         }
 
         [Function("GetList")]
-        public async Task<HttpResponseData> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req, ILogger log)
+        public HttpResponseData Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post")] HttpRequestData req, ILogger log)
         {
             var response = req.CreateResponse(HttpStatusCode.OK);
 
             //We retrieve the id field, which comes as a parameter to the function, by deserializing req.Content.
 
 
-            var connectionString = "Server=tcp:learningappchethan.database.windows.net,1433;Initial Catalog=learningapp;Persist Security Info=False;User ID=chethan;Password=AchuKumar@12345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            var connectionString = Environment.GetEnvironmentVariable("SqlConnection", EnvironmentVariableTarget.Process);
 
             //Azure SQLDB Log
 
@@ -60,7 +61,7 @@ namespace AzureHttpTrigger
                         queryop = sqlDatoToJson(reader);
 
                     }
-                    response.WriteString(queryop);
+                    response.WriteStringAsync(queryop);
 
                     connection.Close();
 
@@ -75,7 +76,7 @@ namespace AzureHttpTrigger
                 logAdded = false;
 
                 log.LogError(e.ToString());
-                response.WriteString(e.ToString());
+                response.WriteStringAsync(e.ToString());
             }
 
             return response;
