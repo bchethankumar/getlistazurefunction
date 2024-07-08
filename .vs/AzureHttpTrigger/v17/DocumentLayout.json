@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\My Info\\Udemy\\Microservices\\AzureHttpTrigger\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{393B7555-6A69-458D-A3FA-50C4D5DE9F8A}|AzureHttpTrigger\\AzureHttpTrigger.csproj|c:\\my info\\udemy\\microservices\\azurehttptrigger\\azurehttptrigger\\azurehttptrigger.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{393B7555-6A69-458D-A3FA-50C4D5DE9F8A}|AzureHttpTrigger\\AzureHttpTrigger.csproj|solutionrelative:azurehttptrigger\\azurehttptrigger.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AzureHttpTrigger",
+              "DocumentMoniker": "C:\\My Info\\Udemy\\Microservices\\AzureHttpTrigger\\AzureHttpTrigger\\AzureHttpTrigger.csproj",
+              "RelativeDocumentMoniker": "AzureHttpTrigger\\AzureHttpTrigger.csproj",
+              "ToolTip": "C:\\My Info\\Udemy\\Microservices\\AzureHttpTrigger\\AzureHttpTrigger\\AzureHttpTrigger.csproj",
+              "RelativeToolTip": "AzureHttpTrigger\\AzureHttpTrigger.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-08T09:47:54.795Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
