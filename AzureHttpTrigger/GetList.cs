@@ -27,7 +27,7 @@ namespace AzureHttpTrigger
             //We retrieve the id field, which comes as a parameter to the function, by deserializing req.Content.
 
 
-            var connectionString = Environment.GetEnvironmentVariable("SqlConnection", EnvironmentVariableTarget.Process);
+            var connectionString = "Server=tcp:learningappchethan.database.windows.net,1433;Initial Catalog=learningapp;Persist Security Info=False;User ID=chethan;Password=AchuKumar@12345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
             //Azure SQLDB Log
 
